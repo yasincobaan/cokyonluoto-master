@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E5638806-3C4B-40EE-AF29-A13D3E87EBEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Çok_Yönlü_Otomasyon_Programı</RootNamespace>
+    <AssemblyName>Çok Yönlü Otomasyon Programı</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>s1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9AECDBAFEE02902D1EBEFA90AB26787DFDE89C6A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Çok Yönlü Otomasyon Programı_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.Mvvm.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.XtraBars.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonksiyonlar\Database.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Fonksiyonlar\Formlar.cs" />
+    <Compile Include="Fonksiyonlar\Mesajlar.cs" />
+    <Compile Include="Fonksiyonlar\Numara.cs" />
+    <Compile Include="Fonksiyonlar\Resimleme.cs" />
+    <Compile Include="frmayarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmayarlar.Designer.cs">
+      <DependentUpon>frmayarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="Modül_Banka\frmBankaAcilisKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Banka\frmBankaAcilisKarti.Designer.cs">
+      <DependentUpon>frmBankaAcilisKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Banka\frmBankaHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Banka\frmBankaHareketleri.Designer.cs">
+      <DependentUpon>frmBankaHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Banka\frmBankaIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Banka\frmBankaIslem.Designer.cs">
+      <DependentUpon>frmBankaIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Banka\frmBankaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Banka\frmBankaListesi.Designer.cs">
+      <DependentUpon>frmBankaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Banka\frmParaTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Banka\frmParaTransfer.Designer.cs">
+      <DependentUpon>frmParaTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Cari\frmCariAcilisKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Cari\frmCariAcilisKarti.Designer.cs">
+      <DependentUpon>frmCariAcilisKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Cari\frmCariGruplari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Cari\frmCariGruplari.Designer.cs">
+      <DependentUpon>frmCariGruplari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Cari\frmCariHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Cari\frmCariHareketleri.Designer.cs">
+      <DependentUpon>frmCariHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Cari\frmCariListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Cari\frmCariListesi.Designer.cs">
+      <DependentUpon>frmCariListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Fatura\frmFaturaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Fatura\frmFaturaListesi.Designer.cs">
+      <DependentUpon>frmFaturaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Fatura\frmSatisFaturasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Fatura\frmSatisFaturasi.Designer.cs">
+      <DependentUpon>frmSatisFaturasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Kasa\frmKasaAcilisKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Kasa\frmKasaAcilisKarti.Designer.cs">
+      <DependentUpon>frmKasaAcilisKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Kasa\frmKasaDevirİslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Kasa\frmKasaDevirİslem.Designer.cs">
+      <DependentUpon>frmKasaDevirİslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Kasa\frmKasaHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Kasa\frmKasaHareketleri.Designer.cs">
+      <DependentUpon>frmKasaHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Kasa\frmKasaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Kasa\frmKasaListesi.Designer.cs">
+      <DependentUpon>frmKasaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Kasa\frmKasaTahsilatÖdeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Kasa\frmKasaTahsilatÖdeme.Designer.cs">
+      <DependentUpon>frmKasaTahsilatÖdeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Kullanici\frmKullaniciPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Kullanici\frmKullaniciPanel.Designer.cs">
+      <DependentUpon>frmKullaniciPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Kullanici\frmKullaniciYönetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Kullanici\frmKullaniciYönetimi.Designer.cs">
+      <DependentUpon>frmKullaniciYönetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Stok\frmStokGruplari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Stok\frmStokGruplari.Designer.cs">
+      <DependentUpon>frmStokGruplari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Stok\frmStokHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Stok\frmStokHareketleri.Designer.cs">
+      <DependentUpon>frmStokHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Stok\frmStokKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Stok\frmStokKarti.Designer.cs">
+      <DependentUpon>frmStokKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Stok\frmStokListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmayarlar.resx">
+      <DependentUpon>frmayarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Banka\frmBankaAcilisKarti.resx">
+      <DependentUpon>frmBankaAcilisKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Banka\frmBankaHareketleri.resx">
+      <DependentUpon>frmBankaHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Banka\frmBankaIslem.resx">
+      <DependentUpon>frmBankaIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Banka\frmBankaListesi.resx">
+      <DependentUpon>frmBankaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Banka\frmParaTransfer.resx">
+      <DependentUpon>frmParaTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Cari\frmCariAcilisKarti.resx">
+      <DependentUpon>frmCariAcilisKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Cari\frmCariGruplari.resx">
+      <DependentUpon>frmCariGruplari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Cari\frmCariHareketleri.resx">
+      <DependentUpon>frmCariHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Cari\frmCariListesi.resx">
+      <DependentUpon>frmCariListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Fatura\frmFaturaListesi.resx">
+      <DependentUpon>frmFaturaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Fatura\frmSatisFaturasi.resx">
+      <DependentUpon>frmSatisFaturasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Kasa\frmKasaAcilisKarti.resx">
+      <DependentUpon>frmKasaAcilisKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Kasa\frmKasaDevirİslem.resx">
+      <DependentUpon>frmKasaDevirİslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Kasa\frmKasaHareketleri.resx">
+      <DependentUpon>frmKasaHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Kasa\frmKasaListesi.resx">
+      <DependentUpon>frmKasaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Kasa\frmKasaTahsilatÖdeme.resx">
+      <DependentUpon>frmKasaTahsilatÖdeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Kullanici\frmKullaniciPanel.resx">
+      <DependentUpon>frmKullaniciPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Kullanici\frmKullaniciYönetimi.resx">
+      <DependentUpon>frmKullaniciYönetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Stok\frmStokGruplari.resx">
+      <DependentUpon>frmStokGruplari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Stok\frmStokHareketleri.resx">
+      <DependentUpon>frmStokHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Stok\frmStokKarti.resx">
+      <DependentUpon>frmStokKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Stok\frmStokListesi.resx">
+      <DependentUpon>frmStokListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Fonksiyonlar\Database.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Database.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Fonksiyonlar\Database.dbml.layout">
+      <DependentUpon>Database.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Çok Yönlü Otomasyon Programı_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="s1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

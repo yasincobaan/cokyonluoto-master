@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="stokcari" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=stokcari.database.windows.net;Initial Catalog=stokcari;User ID=admin1;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False" SettingsObjectName="Çok_Yönlü_Otomasyon_Programı.Properties.Settings" SettingsPropertyName="stokcariConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_STOKLAR" Member="TBL_STOKLAR">
+    <Type Name="TBL_STOKLAR">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="STOKBARKOD" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="STOKKODU" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="STOKADI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STOKBİRİM" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="STOKALISFİYAT" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="STOKSATISFİYAT" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="STOKALISKDV" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="STOKSATISKDV" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="STOKGRUPID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STOKRESİM" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="STOKSAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STOKSAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="STOKEDİTUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STOKEDİTTİME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_STOKGRUPLARI" Member="TBL_STOKGRUPLARI">
+    <Type Name="TBL_STOKGRUPLARI">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GRUPADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GRUPKODU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GRUPSAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GRUPSAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GRUPEDİTUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GRUPEDİTDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_KASALAR" Member="TBL_KASALAR">
+    <Type Name="TBL_KASALAR">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KASAKODU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="KASAADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ACİKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDİTDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDİTUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_KASAHAREKETLERİ" Member="TBL_KASAHAREKETLERİ">
+    <Type Name="TBL_KASAHAREKETLERİ">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KASAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARİID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BELGENO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EVRAKTURU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="EVRAKID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TARİH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GCKODU" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="TUTAR" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDİTDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDİTUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_CARİLER" Member="TBL_CARİLER">
+    <Type Name="TBL_CARİLER">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CARİKODU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CARİADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="VERGİDAİRESİ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VERGİNO" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="GRUPID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ULKE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="SEHİR" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="İLCE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ADRES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TELEFON1" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="TELEFON2" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="FAX1" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="FAX2" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="WEBADRES" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MAILINFO" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="YETKİLİ1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="YETKİLİ2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="YETKİLİ1EMAİLİ1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="YETKİLİ2EMAİLİ2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDİTDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDİTUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_CARİHAREKETLERİ" Member="TBL_CARİHAREKETLERİ">
+    <Type Name="TBL_CARİHAREKETLERİ">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CARİID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EVRAKTURU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BORC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALACAK" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TARİH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TİPİ" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDİTDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDİTUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EVRAKID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_CARİGRUPLARI" Member="TBL_CARİGRUPLARI">
+    <Type Name="TBL_CARİGRUPLARI">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GRUPADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GRUPKODU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDİTDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDİTUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_BANKALAR" Member="TBL_BANKALAR">
+    <Type Name="TBL_BANKALAR">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HESAPNO" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="IBAN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BANKAADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="HESAPADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="SUBE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TEL" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="ADRES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TEMSILCI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TEMSILCIEMAIL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_BANKAHAREKETLERİ" Member="TBL_BANKAHAREKETLERİ">
+    <Type Name="TBL_BANKAHAREKETLERİ">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BANKAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARİID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BELGENO" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TARİH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EVRAKTÜRÜ" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="EVRAKID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GCKODU" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="TUTAR" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDİTTİME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDİTUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_BANKADURUM" Member="VW_BANKADURUM">
+    <Type Name="VW_BANKADURUM">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GİRİS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="CİKİS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="BAKİYE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_BANKAHAREKETLERİ" Member="VW_BANKAHAREKETLERİ">
+    <Type Name="VW_BANKAHAREKETLERİ">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BANKAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARİID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BELGENO" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TARİH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EVRAKTÜRÜ" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="EVRAKID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GİRİS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CİKİS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="HESAPADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="HESAPNO" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_BANKALİSTESİ" Member="VW_BANKALİSTESİ">
+    <Type Name="VW_BANKALİSTESİ">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HESAPNO" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="IBAN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BANKAADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="HESAPADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GİRİS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="CİKİS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="BAKİYE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_KASADURUM" Member="VW_KASADURUM">
+    <Type Name="VW_KASADURUM">
+      <Column Name="KASAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GİRİS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="CİKİS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="BAKİYE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_KASAHAREKETLERİ" Member="VW_KASAHAREKETLERİ">
+    <Type Name="VW_KASAHAREKETLERİ">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KASAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARİID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KASAKODU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="KASAADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CARİKODU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CARİADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BELGENO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EVRAKTURU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="EVRAKID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TARİH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GİRİS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CİKİS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_KASALİSTESİ" Member="VW_KASALİSTESİ">
+    <Type Name="VW_KASALİSTESİ">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KASAKODU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="KASAADI" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ACİKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GİRİS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="CİKİS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="BAKİYE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_KULLANICILAR" Member="TBL_KULLANICILAR">
+    <Type Name="TBL_KULLANICILAR">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KULLANICI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SİFRE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ISIM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SOYISIM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AKTİF" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KODU" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDİTTİME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LASTLOGİN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
